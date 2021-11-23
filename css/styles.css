@@ -90,8 +90,10 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   color: var(--title-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-link.current {
   color: var(--accent-color);
@@ -108,6 +110,9 @@ img {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-contacts:focus,
 .navigation-contacts:hover {
@@ -229,10 +234,36 @@ img {
   flex-wrap: nowrap;
   justify-content: center;
 }
-.direction-work-photo + .direction-work-photo {
+.direction-work-cards {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
   margin-left: 30px;
+  padding: 0;
 }
 
+.direction-work-cards:not(:last-child) {
+  margin-left: 0;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 27px 0;
+  border-bottom-left-radius: 4px;
+  background: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .our-team-section {
   background-color: var(--section-bg-our-team-color);
   font-weight: 700;
@@ -273,6 +304,9 @@ img {
   width: 44px;
   border-radius: 50%;
   background-color: transparent;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-nav:hover {
   background-color: var(--accent-color);
@@ -407,6 +441,9 @@ img {
   width: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-nav-footer:hover {
   background-color: var(--accent-color);
@@ -433,6 +470,9 @@ img {
   border: 1px solid transparent;
   padding: 6px 22px;
   min-width: 73px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-bnt + .filter-bnt {
   margin-left: 8px;
@@ -479,6 +519,9 @@ img {
   text-align: left;
   background: var(--primary-bg-color);
   margin-right: 30px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-cards:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
